@@ -1,0 +1,70 @@
+.box {
+  @apply flex justify-center;
+}
+
+.box > div {
+  @apply w-64 h-64 m-10;
+  @apply border-4 border-black border-dashed;
+  @apply text-center;
+}
+
+.box > div:first-child {
+  @apply bg-pink;
+}
+
+.box > div:nth-child(2) {
+  @apply bg-green;
+}
+
+.box > div:nth-child(3) {
+  @apply bg-yellow;
+}
+
+.root > div {
+  @apply border-t-4 border-black;
+  @apply py-16 px-20;
+}
+
+.root > div:nth-child(1) {
+  @apply bg-yellow;
+}
+
+.root > div:nth-child(3) {
+  @apply bg-pink;
+}
+
+.root > div > p {
+  @apply mt-4;
+}
+
+.squares {
+  @apply flex;
+}
+
+.squares > div {
+  width: 22rem;
+  height: 20rem;
+  @apply border-4 border-black mt-10 mx-12;
+}
+
+.squares > div {
+  @apply px-6;
+}
+
+.rectangle {
+  @apply flex;
+}
+
+.rectangle > div {
+  height: 15rem;
+  width: 30rem;
+  @apply bg-white border-4 border-black mt-10 mx-16;
+}
+
+.rectangle > div {
+  @apply p-6;
+}
+
+.rectangle > div > h3 {
+  @apply mb-2;
+}
