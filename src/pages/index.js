@@ -1,17 +1,19 @@
-import Image from "next/image"
 import SvgSplash from "../components/SvgSplash"
+import SvgUnique from "../components/SvgUnique"
+import SvgTheme from "../components/SvgTheme"
+import SvgProcess from "../components/SvgProcess"
 import css from "./index.module.css"
 
 export default function Home() {
   return (
-    <>
+    <div className={css.root}>
       <div className="bg-orange py-8">
-        <h2>hello</h2>
+        <h2>Dream Builder</h2>
       </div>
       <div>
         <SvgSplash />
       </div>
-      <div className={css.box}>
+      <div className={css.menubox}>
         <div>
           <h2>About</h2>
         </div>
@@ -22,12 +24,13 @@ export default function Home() {
           <h2>Create</h2>
         </div>
       </div>
-      <div className={css.root}>
+      <div className={css.main}>
         <div>
           <h1>What is the Dream Builder?</h1>
           <p>
             The Dream Builder is an online tool to create your own digital dream
             board. <br />
+            <br />
             You can download your dream board to keep and, if you choose, share
             your dreams on the Dream Tapestry.
           </p>
@@ -38,15 +41,24 @@ export default function Home() {
             A dream board is a collage of images and text that represent your
             vision of the future.
           </p>
-          <div className={css.squares}>
+          <div className={css.dreamSq}>
             <div>
-              <h3>Your dream board is unique to you</h3>
+              <SvgUnique />
+              <div>
+                <h3>Your dream board is unique to you</h3>
+              </div>
             </div>
             <div className="bg-blue text-white">
-              <h3>It can be comprehensive or have a specific theme</h3>
+              <SvgTheme />
+              <div>
+                <h3>It can be comprehensive or have a specific theme</h3>
+              </div>
             </div>
             <div>
-              <h3>We devise our own process to conjure our dreams</h3>
+              <SvgProcess />
+              <div>
+                <h3>We devise our own process to conjure our dreams</h3>
+              </div>
             </div>
           </div>
         </div>
@@ -56,7 +68,7 @@ export default function Home() {
             The Dream Builder was created by Bearjam and commissioned by CIVIC
             SQUARE as part of the Dream Fund.
           </p>
-          <div className={css.rectangle}>
+          <div className={css.infobox}>
             <div>
               <h3>About Bearjam</h3>
               <p>
@@ -75,6 +87,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
